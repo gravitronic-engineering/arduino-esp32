@@ -34,6 +34,12 @@ choice ARDUINO_RUNNING_CORE
 
 endchoice
 
+config ARDUINO_LOOP_STACK_SIZE
+    int "Loop thread stack size"
+    default 8192
+    help
+        Amount of stack available for the Arduino task.
+
 config ARDUINO_RUNNING_CORE
     int
     default 0 if ARDUINO_RUN_CORE0
